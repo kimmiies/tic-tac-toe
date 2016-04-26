@@ -11,30 +11,50 @@ $(document).on('ready', function() {
         var m2 = $("." + combo[1]).hasClass("x")    // m2 = true
         var m3 = $("." + combo[2]).hasClass("x")    // m3 = true
 
-          if (m1 && m2 && m3){
-            alert("X wins!");
-          }
-
-          // clear board function call in here
-
         var m4 = $("." + combo[0]).hasClass("o")
         var m5 = $("." + combo[1]).hasClass("o")
         var m6 = $("." + combo[2]).hasClass("o")
 
-          if (m4 && m5 && m6){
-            alert("O wins!")
+          if (m1 && m2 && m3){
+            alert("X wins!");
+            return true
+              // clear board function call in here
+          } else if (m4 && m5 && m6){
+            alert("O wins!");
+            return true
+              // clear board function call in here
           }
-      }
-  }
 
-// check tie function
+          // else if (turn === 9){
+          //   alert("tie!")
+        // }
+    }
+    return false
+  };
+
+// need to return true or false or else it will return undefined. 
+
+function checkTie() {
+  if (turn === 9 && (checkWinner() === false)){
+    alert("tie!")
+  }
+};
+
+
+  // function clearBoard {
+  //
+  // };
+
+
+
+
 // clear board function
 
  // get rid of classes and html text, reset turn and restart attachHandler method
 
-  function attachHandler() {
-// ensure click handler has been turned off for everything that may have been click before
-    $(this).off('click');
+//   function attachHandler() {
+// // ensure click handler has been turned off for everything that may have been click before
+//     $(this).off('click');
       $('td').on('click', function (){
 
         if (turn % 2 === 0) {
@@ -48,11 +68,12 @@ $(document).on('ready', function() {
         $(this).off('click');
 
         checkWinner();
+        checkTie();
 
 
 
       });
-  }
+  // }
 
 });
 
