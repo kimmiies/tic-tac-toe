@@ -17,33 +17,34 @@ $(document).on('ready', function() {
 
           if (m1 && m2 && m3){
             alert("X wins!");
+            clearBoard();
             return true
-              // clear board function call in here
+
+      
           } else if (m4 && m5 && m6){
             alert("O wins!");
+            clearBoard();
             return true
-              // clear board function call in here
+
           }
 
-          // else if (turn === 9){
-          //   alert("tie!")
-        // }
-    }
     return false
   };
 
-// need to return true or false or else it will return undefined. 
+// need to return true or false or else it will return undefined.
 
 function checkTie() {
   if (turn === 9 && (checkWinner() === false)){
-    alert("tie!")
+    alert("tie!");
+    clearBoard()
   }
 };
 
 
-  // function clearBoard {
-  //
-  // };
+function clearBoard() {
+  $('td').removeClass('x').removeClass('o').html("")
+  turn = 0;
+};
 
 
 
