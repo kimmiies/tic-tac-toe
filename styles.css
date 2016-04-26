@@ -1,0 +1,39 @@
+body {
+    background-color: #000000;
+}
+
+
+.container {
+  background-color: #fff;
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+.table-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  text-transform: uppercase;;
+}
+
+table {
+  margin: 0 auto;
+}
+
+td {
+  font-family: Helvetica, sans-serif;
+  font-size: 150px;
+  border: 3px dotted black;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  background-color: lightblue;
+  cursor:  url(http://pixel.nymag.com/imgs/daily/following/2015/12/04/thinky.w529.h352.jpg), pointer;
+}s
